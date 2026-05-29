@@ -66,6 +66,8 @@ const newFileJsonFormat = providorModelInfo.map((provider) => {
   };
 });
 
+console.log(JSON.stringify(newFileJsonFormat, null, 2));
+
 const newFileContent = JSON.stringify(newFileJsonFormat, null, 2);
 
 await file('./model-settings.json').write(newFileContent);
