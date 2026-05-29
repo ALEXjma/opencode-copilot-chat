@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Install Opencode
+        run: bun install -g opencode-ai
+
       - name: Run model updater
         run: bun run scripts/update-json.ts
 
