@@ -105,7 +105,7 @@ if (await exists(modelDir)) {
       2,
     );
     await file(join(modelDir, `${provider.name}.json`)).write(
-      fileContent.substring(0, fileContent.length - 1),
+      fileContent.substring(1, fileContent.length - 1),
     );
   }
   if (providorModelInfo.map((provider) => provider.models).flat().length > 0) {
@@ -117,7 +117,7 @@ if (await exists(modelDir)) {
       2,
     );
     await file(join(modelDir, 'all.json')).write(
-      fileContent.substring(0, fileContent.length - 1),
+      fileContent.substring(1, fileContent.length - 1),
     );
   }
 }
