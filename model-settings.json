@@ -13,8 +13,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 262144,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "qwen3.7-max",
@@ -25,8 +24,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 1000000,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "qwen3.6-plus",
@@ -37,8 +35,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 262144,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "minimax-m2.7",
@@ -49,8 +46,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 204800,
-        "maxOutputTokens": 131072,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 131072
       },
       {
         "id": "deepseek-v4-flash",
@@ -78,8 +74,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 202752,
-        "maxOutputTokens": 32768,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 32768
       },
       {
         "id": "minimax-m2.5",
@@ -90,8 +85,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 204800,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "mimo-v2.5",
@@ -135,8 +129,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 262144,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "glm-5.1",
@@ -147,8 +140,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 202752,
-        "maxOutputTokens": 32768,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 32768
       },
       {
         "id": "mimo-v2.5-pro",
@@ -230,8 +222,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 256000,
-        "maxOutputTokens": 256000,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 256000
       },
       {
         "id": "gpt-5.2",
@@ -324,8 +315,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 262144,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "kimi-k2.6",
@@ -336,8 +326,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 262144,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "gpt-5.1",
@@ -447,8 +436,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 262144,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "mimo-v2.5-free",
@@ -612,8 +600,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 204800,
-        "maxOutputTokens": 131072,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 131072
       },
       {
         "id": "nemotron-3-super-free",
@@ -640,8 +627,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 204800,
-        "maxOutputTokens": 131072,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 131072
       },
       {
         "id": "gpt-5.1-codex",
@@ -668,8 +654,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 200000,
-        "maxOutputTokens": 32000,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 32000
       },
       {
         "id": "minimax-m2.5",
@@ -680,8 +665,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 204800,
-        "maxOutputTokens": 131072,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 131072
       },
       {
         "id": "claude-sonnet-4-5",
@@ -725,8 +709,7 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 262144,
-        "maxOutputTokens": 65536,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 65536
       },
       {
         "id": "claude-opus-4-7",
@@ -755,8 +738,7 @@
         "vision": false,
         "thinking": true,
         "maxInputTokens": 204800,
-        "maxOutputTokens": 131072,
-        "supportsReasoningEffort": []
+        "maxOutputTokens": 131072
       },
       {
         "id": "gpt-5.4",
