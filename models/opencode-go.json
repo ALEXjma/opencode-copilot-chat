@@ -95,6 +95,17 @@
       "maxOutputTokens": 65536
     },
     {
+      "id": "qwen3.7-plus",
+      "name": "Qwen3.7 Plus",
+      "url": "https://opencode.ai/zen/go/v1",
+      "apiType": "messages",
+      "toolCalling": true,
+      "vision": true,
+      "thinking": true,
+      "maxInputTokens": 262144,
+      "maxOutputTokens": 65536
+    },
+    {
       "id": "mimo-v2.5",
       "name": "MiMo V2.5",
       "url": "https://opencode.ai/zen/go/v1",
