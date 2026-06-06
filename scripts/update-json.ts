@@ -89,8 +89,10 @@ const newFileJsonFormat = providorModelInfo.map((provider) => {
   };
 });
 
+const modelSettingsFileContent = JSON.stringify(newFileJsonFormat, null, 2);
+
 await file('./model-settings.json').write(
-  JSON.stringify(newFileJsonFormat, null, 2),
+  modelSettingsFileContent.substring(1, modelSettingsFileContent.length - 1),
 );
 
 const modelDir = './models';
