@@ -12,26 +12,18 @@
 3. Open Model Manage Panel
    ![Manage models button](/assets/manage-models-button.png)
 
-4. Click Add Models
-   ![Add models button](/assets/add-models-button.png)
+4. Click **Open Language Models (JSON)**
+   ![Open Language Model in JSON](open-language-model-json.png)
 
-5. Choose Custom Endpoint
-   ![Choose custom endpoint](/assets/choose-custom-endpoint.png)
-
-6. Enter Your Group Name (can be any name you like)
-   ![Rename group name](/assets/rename-group-name.png)
-
-7. Enter Your API Key
-   ![Enter API key](/assets/enter-api-key.png)
-
-8. Select Default API Type (can be set to any, we will modify it later)
-   ![Choose API type](/assets/choose-api-type.png)
-
-9. Copy the `apiKey` section and paste it into our provided JSON
-   ![Editing panel](/assets/editing-panel.png)
+5. Paste our provided JSON
    [JSON File](/model-settings.json)
+   ![Open Language Model in JSON](paste-result.png)
 
-10. Replace the whole section that VS Code created
+6. Go back to the Model Manage Panel and find the Update API Key option
+   ![Find Update API Key at Right Side Drop Down](update-api-key.png)
+
+7. Change it with your real API key
+   ![Enter API key](/assets/enter-api-key.png)
 
 ## Reference
 
