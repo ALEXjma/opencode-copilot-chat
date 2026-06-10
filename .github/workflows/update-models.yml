@@ -35,13 +35,22 @@ jobs:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         run: bun run scripts/update-json.ts
 
+      - name: Debug - show generated files
+        run: |
+          echo "=== model-settings.json ==="
+          cat model-settings.json
+          echo "=== models/ directory ==="
+          ls -la models/
+          echo "=== git status ==="
+          git status --porcelain -- model-settings.json models/
+
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet -- model-settings.json models/; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
+          if git status --porcelain -- model-settings.json models/ | grep -q .; then
             echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push changes
