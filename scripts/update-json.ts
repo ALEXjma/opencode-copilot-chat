@@ -47,40 +47,41 @@ if (!providors.data || !providors.data.providers) {
   process.exit(1);
 }
 
-const zenFreeModelsId: string[] = await fetch(
-  'https://opencode.ai/zen/v1/models',
-)
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error(`Failed to fetch Zen Free models: ${res.statusText}`);
-    }
-    return res.json();
-  })
-  .catch((err) => {
-    console.error(err);
-    return [];
-  })
-  .then((resData) => {
-    const resModelsId =
-      (
-        resData as {
-          object: string;
-          data: Array<{
-            id: string;
-            object: string;
-            created: number;
-            owned_by: string;
-          }>;
-        }
-      ).data || [];
-    const bigPickleModelIndex = resModelsId.findIndex((model) =>
-      model.id.includes('big-pickle'),
-    );
-    const freeModelsIds = resModelsId
-      .slice(bigPickleModelIndex)
-      .map((model) => model.id);
-    return freeModelsIds;
-  });
+// const zenFreeModelsId: string[] = await fetch(
+//   'https://opencode.ai/zen/v1/models',
+// )
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error(`Failed to fetch Zen Free models: ${res.statusText}`);
+//     }
+//     return res.json();
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//     return [];
+//   })
+//   .then((resData) => {
+//     const resModelsId =
+//       (
+//         resData as {
+//           object: string;
+//           data: Array<{
+//             id: string;
+//             object: string;
+//             created: number;
+//             owned_by: string;
+//           }>;
+//         }
+//       ).data || [];
+//     const bigPickleModelIndex = resModelsId.findIndex((model) =>
+//       model.id.includes('big-pickle'),
+//     );
+//     const freeModelsIds = resModelsId
+//       .slice(bigPickleModelIndex)
+//       .map((model) => model.id);
+//     return freeModelsIds;
+//   });
+const zenFreeModelsId: string[] = ['big-pickle'];
 
 const providorModelInfo: ProvidorInfo[] = providors.data.providers
   .map((provider) => {
@@ -160,6 +161,7 @@ if (providorModelInfo.map((provider) => provider.models).flat().length > 0) {
     fileContent.substring(1, fileContent.length - 1),
   );
 }
+
 if (zenFreeModelsId.length > 0) {
   const providorZen = (providorModelInfo
     .filter((provider) => provider.name.includes('Zen'))
@@ -168,8 +170,9 @@ if (zenFreeModelsId.length > 0) {
     console.error('Zen provider not found, skipping Zen Free models update');
   } else {
     const zenModels = providorZen.models;
-    const zenFreeModelInfo: VSCodeModelsInfo[] = zenModels.filter((model) =>
-      zenFreeModelsId.includes(model.id),
+    const zenFreeModelInfo: VSCodeModelsInfo[] = zenModels.filter(
+      (model) =>
+        zenFreeModelsId.includes(model.id) || model.id.includes('free'),
     );
     const fileContent = JSON.stringify(
       {
@@ -182,6 +185,8 @@ if (zenFreeModelsId.length > 0) {
       fileContent.substring(1, fileContent.length - 1),
     );
   }
+} else {
+  console.warn('No Zen Free models found, skipping Zen Free models update');
 }
 
 process.exit(0);
