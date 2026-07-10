@@ -617,7 +617,12 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 500000,
-        "maxOutputTokens": 500000
+        "maxOutputTokens": 500000,
+        "supportsReasoningEffort": [
+          "low",
+          "medium",
+          "high"
+        ]
       },
       {
         "id": "north-mini-code-free",
@@ -946,7 +951,12 @@
         "vision": true,
         "thinking": true,
         "maxInputTokens": 256000,
-        "maxOutputTokens": 256000
+        "maxOutputTokens": 256000,
+        "supportsReasoningEffort": [
+          "low",
+          "medium",
+          "high"
+        ]
       },
       {
         "id": "gpt-5.1",
