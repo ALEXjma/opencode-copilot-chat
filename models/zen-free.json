@@ -9,12 +9,7 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 200000,
-      "maxOutputTokens": 32000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 32000
     },
     {
       "id": "nemotron-3-ultra-free",
@@ -25,12 +20,7 @@
       "vision": false,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 128000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 128000
     },
     {
       "id": "deepseek-v4-flash-free",
@@ -43,8 +33,6 @@
       "maxInputTokens": 200000,
       "maxOutputTokens": 128000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -72,13 +60,8 @@
       "toolCalling": true,
       "vision": false,
       "thinking": true,
-      "maxInputTokens": 256000,
-      "maxOutputTokens": 64000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxInputTokens": 190000,
+      "maxOutputTokens": 64000
     },
     {
       "id": "big-pickle",

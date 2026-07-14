@@ -11,8 +11,6 @@
       "maxInputTokens": 1000000,
       "maxOutputTokens": 384000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -26,7 +24,11 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     },
     {
       "id": "qwen3.7-max",
@@ -37,7 +39,11 @@
       "vision": false,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     },
     {
       "id": "kimi-k2.7-code",
@@ -72,8 +78,6 @@
       "maxInputTokens": 1000000,
       "maxOutputTokens": 384000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -128,12 +132,7 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 128000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 128000
     },
     {
       "id": "kimi-k2.6",
@@ -155,12 +154,7 @@
       "vision": false,
       "thinking": true,
       "maxInputTokens": 1048576,
-      "maxOutputTokens": 128000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 128000
     },
     {
       "id": "qwen3.6-plus",
@@ -171,6 +165,10 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     }
   ]

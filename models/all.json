@@ -11,8 +11,6 @@
       "maxInputTokens": 1000000,
       "maxOutputTokens": 384000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -26,7 +24,11 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     },
     {
       "id": "qwen3.7-max",
@@ -37,7 +39,11 @@
       "vision": false,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     },
     {
       "id": "kimi-k2.7-code",
@@ -72,8 +78,6 @@
       "maxInputTokens": 1000000,
       "maxOutputTokens": 384000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -128,12 +132,7 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 128000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 128000
     },
     {
       "id": "kimi-k2.6",
@@ -155,12 +154,7 @@
       "vision": false,
       "thinking": true,
       "maxInputTokens": 1048576,
-      "maxOutputTokens": 128000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 128000
     },
     {
       "id": "qwen3.6-plus",
@@ -171,7 +165,11 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     },
     {
       "id": "deepseek-v4-flash",
@@ -184,8 +182,6 @@
       "maxInputTokens": 1000000,
       "maxOutputTokens": 384000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -210,12 +206,7 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 200000,
-      "maxOutputTokens": 32000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 32000
     },
     {
       "id": "nemotron-3-ultra-free",
@@ -226,12 +217,7 @@
       "vision": false,
       "thinking": true,
       "maxInputTokens": 1000000,
-      "maxOutputTokens": 128000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 128000
     },
     {
       "id": "gemini-3-flash",
@@ -261,8 +247,6 @@
       "maxInputTokens": 200000,
       "maxOutputTokens": 128000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -365,8 +349,6 @@
       "maxInputTokens": 1000000,
       "maxOutputTokens": 384000,
       "supportsReasoningEffort": [
-        "low",
-        "medium",
         "high",
         "max"
       ]
@@ -464,11 +446,7 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 512000,
-      "maxOutputTokens": 128000,
-      "supportsReasoningEffort": [
-        "none",
-        "thinking"
-      ]
+      "maxOutputTokens": 128000
     },
     {
       "id": "gpt-5.1-codex",
@@ -497,7 +475,6 @@
       "maxInputTokens": 128000,
       "maxOutputTokens": 128000,
       "supportsReasoningEffort": [
-        "none",
         "low",
         "medium",
         "high",
@@ -548,7 +525,11 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 262144,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     },
     {
       "id": "gpt-5.2",
@@ -629,6 +610,25 @@
       ]
     },
     {
+      "id": "gpt-5.6-luna",
+      "name": "GPT-5.6 Luna",
+      "url": "https://opencode.ai/zen/v1",
+      "apiType": "chat-completions",
+      "toolCalling": true,
+      "vision": true,
+      "thinking": true,
+      "maxInputTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "supportsReasoningEffort": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
       "id": "claude-opus-4-1",
       "name": "Claude Opus 4.1",
       "url": "https://opencode.ai/zen/v1",
@@ -671,6 +671,25 @@
       "maxOutputTokens": 65536
     },
     {
+      "id": "gpt-5.6-terra",
+      "name": "GPT-5.6 Terra",
+      "url": "https://opencode.ai/zen/v1",
+      "apiType": "chat-completions",
+      "toolCalling": true,
+      "vision": true,
+      "thinking": true,
+      "maxInputTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "supportsReasoningEffort": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
       "id": "claude-fable-5",
       "name": "Claude Fable 5",
       "url": "https://opencode.ai/zen/v1",
@@ -696,13 +715,8 @@
       "toolCalling": true,
       "vision": false,
       "thinking": true,
-      "maxInputTokens": 256000,
-      "maxOutputTokens": 64000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxInputTokens": 190000,
+      "maxOutputTokens": 64000
     },
     {
       "id": "claude-haiku-4-5",
@@ -888,6 +902,25 @@
       "maxOutputTokens": 131072
     },
     {
+      "id": "gpt-5.6-sol",
+      "name": "GPT-5.6 Sol",
+      "url": "https://opencode.ai/zen/v1",
+      "apiType": "chat-completions",
+      "toolCalling": true,
+      "vision": true,
+      "thinking": true,
+      "maxInputTokens": 1050000,
+      "maxOutputTokens": 128000,
+      "supportsReasoningEffort": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
       "id": "gpt-5-codex",
       "name": "GPT-5 Codex",
       "url": "https://opencode.ai/zen/v1",
@@ -929,7 +962,11 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 262144,
-      "maxOutputTokens": 65536
+      "maxOutputTokens": 65536,
+      "supportsReasoningEffort": [
+        "high",
+        "max"
+      ]
     },
     {
       "id": "grok-build-0.1",
@@ -940,12 +977,7 @@
       "vision": true,
       "thinking": true,
       "maxInputTokens": 256000,
-      "maxOutputTokens": 256000,
-      "supportsReasoningEffort": [
-        "low",
-        "medium",
-        "high"
-      ]
+      "maxOutputTokens": 256000
     },
     {
       "id": "gpt-5.1",
