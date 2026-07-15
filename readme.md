@@ -31,6 +31,8 @@ This project provides a guide and settings JSON to add opencode's models to your
 
 - **[chat.utilitySmallModel](vscode://settings/chat.utilitySmallModel)**  
   Override the language model used by built-in small/fast utility flows. A fast and inexpensive model is recommended. Leave empty to use the default model.
+- **[chat.byokUtilityModelDefault](vscode://settings/chat.byokUtilityModelDefault)**
+  Set to `mainAgent` When you Copliot Error shows [No utility model is configured for 'copilot-utility-small' while the selected main agent model is BYOK.](https://github.com/Pikacnu/opencode-copilot-chat/issues/1)
 
 ## Automated Updates
 
