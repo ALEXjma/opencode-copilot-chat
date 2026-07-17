@@ -10,7 +10,7 @@
       "thinking": true,
       "maxInputTokens": 1048576,
       "maxOutputTokens": 128000,
-      "tooltip": "Price Per 1M token -- Input 1.74$, Output 3.48$, Cache 0.0145$"
+      "tooltip": "Price Per 1M token -- Input 0.435$, Output 0.87$, Cache 0.003625$"
     },
     {
       "id": "kimi-k2.7-code",
@@ -71,7 +71,7 @@
         "high",
         "max"
       ],
-      "tooltip": "Price Per 1M token -- Input 0.14$, Output 0.28$, Cache 0.0028$"
+      "tooltip": "Price Per 1M token -- Input 0.435$, Output 0.87$, Cache 0.003625$"
     },
     {
       "id": "grok-4.5",
@@ -135,7 +135,7 @@
         "high",
         "max"
       ],
-      "tooltip": "Price Per 1M token -- Input 1.74$, Output 3.48$, Cache 0.0145$"
+      "tooltip": "Price Per 1M token -- Input 0.435$, Output 0.87$, Cache 0.003625$"
     },
     {
       "id": "qwen3.7-max",
