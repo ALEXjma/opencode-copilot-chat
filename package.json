@@ -1,10 +1,13 @@
 {
+  "name": "opencode-vscode",
+  "private": true,
+  "scripts": {
+    "build": "bun build ./cli/index.ts --compile --outfile dist/opencode-auto-update"
+  },
   "dependencies": {
     "@opencode-ai/sdk": "^1.18.1",
     "@types/node": "^25.9.5"
   },
-  "name": "opencode-vscode",
-  "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },

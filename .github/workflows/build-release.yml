@@ -1,0 +1,95 @@
+name: Build & Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release (e.g. v1.0.0)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: bun-linux-x64
+            artifact: opencode-auto-update-linux-x64
+          - os: ubuntu-latest
+            target: bun-linux-arm64
+            artifact: opencode-auto-update-linux-arm64
+          - os: macos-latest
+            target: bun-darwin-x64
+            artifact: opencode-auto-update-darwin-x64
+          - os: macos-latest
+            target: bun-darwin-arm64
+            artifact: opencode-auto-update-darwin-arm64
+          - os: windows-latest
+            target: bun-windows-x64
+            artifact: opencode-auto-update-windows-x64
+            ext: .exe
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build
+        run: |
+          bun build ./cli/index.ts --compile --target=${{ matrix.target }} --outfile=${{ matrix.artifact }}${{ matrix.ext || '' }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}${{ matrix.ext || '' }}
+          path: ${{ matrix.artifact }}${{ matrix.ext || '' }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Rename artifacts (strip directory)
+        run: |
+          mkdir dist
+          for f in artifacts/*/*; do
+            cp "$f" "dist/$(basename "$f")"
+          done
+          ls -lh dist/
+
+      - name: Determine tag
+        id: tag
+        run: |
+          if [ -n "${{ github.event.inputs.tag }}" ]; then
+            echo "TAG=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
+          elif [ -n "${{ github.ref_name }}" ]; then
+            echo "TAG=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          else
+            echo "TAG=latest" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.TAG }}
+          name: ${{ steps.tag.outputs.TAG }}
+          files: dist/*
+          generate_release_notes: true

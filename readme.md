@@ -46,6 +46,65 @@ bun install opencode-ai
 bun run scripts/update-json.ts
 ```
 
+## CLI — Auto-Sync to VS Code
+
+A cross-platform CLI that syncs model definitions directly into VS Code's `chatLanguageModels.json`, with optional cron / scheduled task support.
+
+### Quick Start
+
+1. Download the latest binary from [Releases](https://github.com/Pikacnu/opencode-copilot-chat/releases)
+2. Run the sync:
+
+```bash
+# One-time sync (Windows: opencode-auto-update-windows-x64.exe)
+./opencode-auto-update --sync
+
+# Sync a specific provider + source
+./opencode-auto-update --sync --provider "OpenCode Go" --source go
+```
+
+Or build from source:
+
+```bash
+bun install
+bun run build       # → dist/opencode-auto-update (or .exe on Windows)
+```
+
+### Install as Scheduled Task
+
+```bash
+# Run daily at 2 AM
+./dist/opencode-auto-update --install
+
+# Run every hour
+./dist/opencode-auto-update --install --schedule hourly
+
+# Run weekly
+./dist/opencode-auto-update --install --schedule weekly
+
+# Remove the schedule
+./dist/opencode-auto-update --uninstall
+```
+
+| Platform | Mechanism                   |
+| -------- | --------------------------- |
+| Windows  | Task Scheduler (`schtasks`) |
+| macOS    | `crontab`                   |
+| Linux    | `crontab`                   |
+
+### All Options
+
+| Flag                    | Description                                        |
+| ----------------------- | -------------------------------------------------- |
+| `-h, --help`            | Show help                                          |
+| `-s, --source <type>`   | Model source: `all` \| `zen-free` \| `go` \| `zen` |
+| `-p, --provider <name>` | Provider name in VS Code config                    |
+| `--sync`                | Run sync — update `chatLanguageModels.json`        |
+| `--save`                | Save options to `~/.opencode-auto-update-cli.json` |
+| `--install`             | Register as cron / scheduled task                  |
+| `--uninstall`           | Remove the schedule                                |
+| `--schedule <when>`     | `hourly` \| `daily` \| `weekly` (default: `daily`) |
+
 ## Reference
 
 - [VS Code Language Model Configuration Reference](https://code.visualstudio.com/docs/copilot/customization/language-models#_model-configuration-reference) — Official documentation for model configuration in VS Code Copilot Chat.
