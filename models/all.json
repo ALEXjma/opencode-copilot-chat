@@ -948,7 +948,7 @@
     },
     {
       "id": "kimi-k3",
-      "name": "Kimi K3",
+      "name": "Kimi K3 (2x usage)",
       "url": "https://opencode.ai/zen/go/v1",
       "apiType": "chat-completions",
       "toolCalling": true,
@@ -978,7 +978,7 @@
         "high",
         "max"
       ],
-      "tooltip": "Price Per 1M token -- Input 0.435$, Output 0.87$, Cache 0.003625$"
+      "tooltip": "Price Per 1M token -- Input 0.14$, Output 0.28$, Cache 0.0028$"
     },
     {
       "id": "grok-4.5",
