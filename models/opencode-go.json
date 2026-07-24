@@ -28,6 +28,23 @@
       "tooltip": "Price Per 1M token -- Input 0.95$, Output 4$, Cache 0.19$"
     },
     {
+      "id": "hy3",
+      "name": "Hy3",
+      "url": "https://opencode.ai/zen/go/v1",
+      "apiType": "chat-completions",
+      "toolCalling": true,
+      "vision": false,
+      "thinking": true,
+      "maxInputTokens": 256000,
+      "maxOutputTokens": 64000,
+      "supportsReasoningEffort": [
+        "none",
+        "low",
+        "high"
+      ],
+      "tooltip": "Price Per 1M token -- Input 0.14$, Output 0.58$, Cache 0.035$"
+    },
+    {
       "id": "mimo-v2.5",
       "name": "MiMo V2.5",
       "url": "https://opencode.ai/zen/go/v1",
