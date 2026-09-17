@@ -293,6 +293,18 @@
       "tooltip": "Price Per 1M token -- Input 0.1$, Output 0.2$, Cache 0.002$"
     },
     {
+      "id": "union-alpha",
+      "name": "Union Alpha Free",
+      "url": "https://opencode.ai/zen/go/v1",
+      "apiType": "messages",
+      "toolCalling": true,
+      "vision": true,
+      "thinking": true,
+      "maxInputTokens": 262144,
+      "maxOutputTokens": 131072,
+      "tooltip": "Price Per 1M token -- Input 0$, Output 0$, Cache 0$"
+    },
+    {
       "id": "qwen3.8-flash",
       "name": "Qwen3.8 Flash",
       "url": "https://opencode.ai/zen/go/v1",
