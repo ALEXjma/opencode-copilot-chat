@@ -101,8 +101,7 @@
           "low",
           "medium",
           "high",
-          "xhigh",
-          "max"
+          "xhigh"
         ],
         "tooltip": "Price Per 1M token -- Input 1.25$, Output 4.25$, Cache 0.15$"
       },
@@ -213,7 +212,7 @@
       },
       {
         "id": "gpt-5.6-sol",
-        "name": "GPT-5.6 Sol (50% Off)",
+        "name": "GPT-5.6 Sol",
         "url": "https://opencode.ai/zen/v1",
         "apiType": "chat-completions",
         "toolCalling": true,
@@ -229,7 +228,7 @@
           "xhigh",
           "max"
         ],
-        "tooltip": "Price Per 1M token -- Input 2$, Output 10$, Cache 0.2$, Cache 2.5$ | Price Over 272k tokens -- Input 4$, Output 15$, Cache 0.4$, Cache 5$"
+        "tooltip": "Price Per 1M token -- Input 4$, Output 20$, Cache 0.4$, Cache 5$ | Price Over 272k tokens -- Input 8$, Output 30$, Cache 0.8$, Cache 10$"
       },
       {
         "id": "claude-opus-5",
@@ -294,6 +293,18 @@
           "xhigh"
         ],
         "tooltip": "Price Per 1M token -- Input 1.75$, Output 14$, Cache 0.175$"
+      },
+      {
+        "id": "mimo-v2.6-flash-free",
+        "name": "MiMo-V2.6-Flash Free",
+        "url": "https://opencode.ai/zen/v1",
+        "apiType": "chat-completions",
+        "toolCalling": true,
+        "vision": true,
+        "thinking": true,
+        "maxInputTokens": 200000,
+        "maxOutputTokens": 32000,
+        "tooltip": "Price Per 1M token -- Input 0$, Output 0$, Cache 0$"
       },
       {
         "id": "glm-5.2",
@@ -486,6 +497,23 @@
         "maxInputTokens": 256000,
         "maxOutputTokens": 256000,
         "tooltip": "Price Per 1M token -- Input 1$, Output 2$, Cache 0.2$"
+      },
+      {
+        "id": "deepseek-v4.1-flash",
+        "name": "DeepSeek V4.1 Flash",
+        "url": "https://opencode.ai/zen/v1",
+        "apiType": "chat-completions",
+        "toolCalling": true,
+        "vision": true,
+        "thinking": true,
+        "maxInputTokens": 1000000,
+        "maxOutputTokens": 384000,
+        "supportsReasoningEffort": [
+          "low",
+          "high",
+          "max"
+        ],
+        "tooltip": "Price Per 1M token -- Input 0.3$, Output 1.2$, Cache 0.006$"
       },
       {
         "id": "claude-fable-5-1",
@@ -786,6 +814,23 @@
           "xhigh"
         ],
         "tooltip": "Price Per 1M token -- Input 30$, Output 180$, Cache 30$"
+      },
+      {
+        "id": "qwen3.8-flash",
+        "name": "Qwen3.8 Flash",
+        "url": "https://opencode.ai/zen/v1",
+        "apiType": "messages",
+        "toolCalling": true,
+        "vision": true,
+        "thinking": true,
+        "maxInputTokens": 1000000,
+        "maxOutputTokens": 131072,
+        "supportsReasoningEffort": [
+          "low",
+          "medium",
+          "xhigh"
+        ],
+        "tooltip": "Price Per 1M token -- Input 0.15$, Output 0.47$, Cache 0.016$, Cache 0.2$"
       },
       {
         "id": "big-pickle",
@@ -1257,6 +1302,18 @@
         "tooltip": "Price Per 1M token -- Input 0.1$, Output 0.2$, Cache 0.002$"
       },
       {
+        "id": "mimo-v2.6-pro",
+        "name": "MiMo-V2.6-Pro",
+        "url": "https://opencode.ai/zen/go/v1",
+        "apiType": "chat-completions",
+        "toolCalling": true,
+        "vision": true,
+        "thinking": true,
+        "maxInputTokens": 1048576,
+        "maxOutputTokens": 131072,
+        "tooltip": "Price Per 1M token -- Input 0.435$, Output 0.87$, Cache 0.003625$"
+      },
+      {
         "id": "minimax-m2.7",
         "name": "MiniMax-M2.7",
         "url": "https://opencode.ai/zen/go/v1",
@@ -1266,7 +1323,7 @@
         "thinking": true,
         "maxInputTokens": 204800,
         "maxOutputTokens": 131072,
-        "tooltip": "Price Per 1M token -- Input 0.3$, Output 1.2$, Cache 0.06$"
+        "tooltip": "Price Per 1M token -- Input 0.3$, Output 1.2$, Cache 0.06$, Cache 0.375$"
       },
       {
         "id": "kimi-k2.6",
@@ -1489,6 +1546,18 @@
         "tooltip": "Price Per 1M token -- Input 0.15$, Output 0.47$, Cache 0.016$, Cache 0.2$"
       },
       {
+        "id": "mimo-v2.6-flash",
+        "name": "MiMo-V2.6-Flash",
+        "url": "https://opencode.ai/zen/go/v1",
+        "apiType": "chat-completions",
+        "toolCalling": true,
+        "vision": true,
+        "thinking": true,
+        "maxInputTokens": 1048576,
+        "maxOutputTokens": 131072,
+        "tooltip": "Price Per 1M token -- Input 0.14$, Output 0.28$, Cache 0.0028$"
+      },
+      {
         "id": "grok-4.6",
         "name": "Grok 4.6",
         "url": "https://opencode.ai/zen/go/v1",
@@ -1579,6 +1648,24 @@
           "max"
         ],
         "tooltip": "Price Per 1M token -- Input 1.4$, Output 4.4$, Cache 0.26$"
+      },
+      {
+        "id": "grok-4.7",
+        "name": "Grok 4.7",
+        "url": "https://opencode.ai/zen/go/v1",
+        "apiType": "chat-completions",
+        "toolCalling": true,
+        "vision": true,
+        "thinking": true,
+        "maxInputTokens": 500000,
+        "maxOutputTokens": 500000,
+        "supportsReasoningEffort": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "tooltip": "Price Per 1M token -- Input 2$, Output 6$, Cache 0.5$ | Price Over 200k tokens -- Input 4$, Output 12$, Cache 1$"
       },
       {
         "id": "mimo-v2.5",
