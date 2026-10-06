@@ -163,20 +163,8 @@
       "tooltip": "Price Per 1M token -- Input 0.3$, Output 1.2$, Cache 0.006$"
     },
     {
-      "id": "minimax-m2.7",
-      "name": "MiniMax-M2.7",
-      "url": "https://opencode.ai/zen/go/v1",
-      "apiType": "messages",
-      "toolCalling": true,
-      "vision": false,
-      "thinking": true,
-      "maxInputTokens": 204800,
-      "maxOutputTokens": 131072,
-      "tooltip": "Price Per 1M token -- Input 0.3$, Output 1.2$, Cache 0.06$, Cache 0.375$"
-    },
-    {
-      "id": "space-bunny-free",
-      "name": "Space Bunny Free",
+      "id": "space-bunny",
+      "name": "Space Bunny",
       "url": "https://opencode.ai/zen/go/v1",
       "apiType": "chat-completions",
       "toolCalling": true,
@@ -191,7 +179,19 @@
         "xhigh",
         "max"
       ],
-      "tooltip": "Price Per 1M token -- Input 0$, Output 0$, Cache 0$"
+      "tooltip": "Price Per 1M token -- Input 0.15$, Output 0.6$, Cache 0.03$"
+    },
+    {
+      "id": "minimax-m2.7",
+      "name": "MiniMax-M2.7",
+      "url": "https://opencode.ai/zen/go/v1",
+      "apiType": "messages",
+      "toolCalling": true,
+      "vision": false,
+      "thinking": true,
+      "maxInputTokens": 204800,
+      "maxOutputTokens": 131072,
+      "tooltip": "Price Per 1M token -- Input 0.3$, Output 1.2$, Cache 0.06$, Cache 0.375$"
     },
     {
       "id": "mimo-v2.5-pro",
